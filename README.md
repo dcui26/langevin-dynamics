@@ -10,7 +10,7 @@ control over temperature, particle count, potential, and integrator.
 
 ## Features
 
-- **Potentials**: Harmonic, Double Well (tunable barrier separation),
+- **Potentials**: Harmonic, Double Well (manually tunable barrier separation),
   Quartic
 - **Integrators**: Euler-Maruyama, Leimkuhler-Matthews, Stochastic Heun
   (predictor-corrector)
