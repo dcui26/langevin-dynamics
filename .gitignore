@@ -1,0 +1,31 @@
+# Build artifacts (regenerated via `cmake .. && make`)
+build/
+ 
+#streamlit imp
+python_streamlit/
+
+# Compiled pybind11 extension module (machine/Python-version specific;
+# copied into webapp/ automatically by CMakeLists.txt's POST_BUILD step)
+webapp/*.so
+webapp/*.pyd
+ 
+# Python virtual environment
+.venv/
+venv/
+env/
+ 
+# Python bytecode cache
+__pycache__/
+*.pyc
+ 
+# Editor / IDE (contains machine-specific absolute paths)
+.vscode/
+.idea/
+ 
+# OS cruft
+.DS_Store
+Thumbs.db
+
+#misc
+a.txt
+.old/

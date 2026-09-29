@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Langevin Dynamics Simulator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Langevin Dynamics Simulator</h1>
+
+<div class="layout">
+
+    <div class="canvas-wrapper">
+        <canvas id="canvas" width="600" height="600"></canvas>
+        <div class="zoom-controls">
+            <button id="zoomInBtn">+</button>
+            <button id="zoomOutBtn">−</button>
+        </div>
+    </div>
+
+    <div class="panel">
+
+        <div class="button-row">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+        </div>
+
+        <div class="control">
+            <label for="temperature">Temperature</label>
+            <input type="range" id="temperature" min="0.1" max="10.0" step="0.1" value="1.0">
+            <span id="temperature_val">1.0</span>
+        </div>
+
+        <div class="control">
+            <label for="num_particles">Particles</label>
+            <input type="range" id="num_particles" min="1" max="1000" step="1" value="100">
+            <span id="num_particles_val">100</span>
+        </div>
+
+        <div class="control">
+            <label for="potential">Potential</label>
+            <select id="potential">
+                <option value="harmonic">Harmonic</option>
+                <option value="double_well">Double Well</option>
+                <option value="quartic">Quartic</option>
+            </select>
+        </div>
+
+        <div class="control">
+            <label for="integrator">Integrator</label>
+            <select id="integrator">
+                <option value="euler_maruyama">Euler-Maruyama</option>
+                <option value="leimkuhler_matthews">Leimkuhler-Matthews</option>
+                <option value="stochastic_heun">Stochastic-Heun</option>
+            </select>
+        </div>
+
+        <p id="status">Status: stopped</p>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
