@@ -64,13 +64,3 @@ python3 app.py
 ```
 
 Then open `http://127.0.0.1:5000` in a browser.
-
-## Notes
-
-- Simulation stepping is currently driven by client polling (each
-  `/step` request both advances and reads the simulation), rather than an
-  independent background thread — a reasonable future extension for
-  fully decoupling simulation rate from client/network timing.
-- Particle count is capped at 1000 and temperature is clamped
-  server-side; both are tuned for a 2D interactive visualization, not
-  large-scale simulation.
