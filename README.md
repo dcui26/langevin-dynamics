@@ -16,8 +16,8 @@ control over temperature, particle count, potential, and integrator.
   (predictor-corrector)
 - **Interactive frontend**: live sliders for temperature/particle count,
   dropdowns for potential/integrator, start/stop controls, zoom
-- Polymorphic C++ core — `Potential` and `Integrator` are abstract base
-  classes, so new physics can be added without touching simulation logic
+- Polymorphic C++ core (`Potential` and `Integrator` are abstract base
+  classes, so new physics can be added without touching simulation logic)
 - Server-side input validation and state guards (safe against out-of-order
   requests, malformed input, and unstarted-simulation edge cases)
 
