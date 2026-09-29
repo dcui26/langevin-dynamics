@@ -27,9 +27,6 @@ control over temperature, particle count, potential, and integrator.
 src/, include/, bindings/    — C++ simulation core + pybind11 module
 CMakeLists.txt, build/       — build system (build/ is gitignored)
 webapp/                      — Flask backend + HTML/CSS/JS frontend
-python_streamlit/            — earlier Streamlit prototype, used to
-                                validate simulation/bindings logic before
-                                building the full Flask frontend
 ```
 
 The C++ core (`Particle`, `Potential`, `Integrator`, `Simulator`) is
