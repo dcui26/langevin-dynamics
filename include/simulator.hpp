@@ -7,7 +7,7 @@
 
 class Simulator {
 private:
-    //use unique pointers, prevent copying, and automatic free mem
+    //use smart pointers, prevent copying, and automatic free mem
     std::shared_ptr<Potential> potential;
     std::shared_ptr<Integrator> integrator;
     std::vector<Particle> particles;
